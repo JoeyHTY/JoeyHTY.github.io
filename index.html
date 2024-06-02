@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TingYi He</title>
+    <title>Ting Yi He</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400&display=swap');
 
@@ -12,9 +12,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-image: url('background.png');
-            background-size: cover;
-            background-attachment: fixed;
+            background-color: #2C3E50;
             color: #ECF0F1;
         }
         .container {
@@ -22,7 +20,7 @@
             margin: auto;
             overflow: hidden;
             padding: 20px;
-            background-color: rgba(44, 62, 80, 0.8); /* Add a semi-transparent background for better readability */
+            background-color: rgba(44, 62, 80, 0.8);
             border-radius: 10px;
         }
         header {
@@ -95,12 +93,19 @@
         }
         .additional-photos {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 20px;
         }
         .additional-photo {
             width: 30%;
             border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .photo-caption {
+            text-align: center;
+            font-size: 1em;
+            margin-bottom: 20px;
         }
         .universe-photo {
             width: 100%;
@@ -143,12 +148,21 @@
             <h2>About Me</h2>
             
             <h3>Personal Background</h3>
-            <p>Hi! My name is TingYi He, and I hail from the vibrant Chongqing, China. My fascination with the cosmos began at a young age, inspired by the STARWARS movie series. Initially drawn to Aerospace Engineering, my passion for exploring the unknown and the excitement I felt when deriving theoretical formulas on my own led me to  explore various scientific disciplines, ultimately solidifying my passion for astrophysics. Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
+            <p>Hi! My name is Ting Yi He, and I hail from the vibrant city of Chongqing, China. My fascination with the cosmos began at a young age, inspired by the STARWARS movie series. Initially drawn to Aerospace Engineering, my passion for uncovering the unknown and the excitement I felt when deriving theoretical formulas on my own led me to the field of astrophysics. This curiosity and dedication have driven me to explore various scientific disciplines, ultimately solidifying my passion for astrophysics. Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
             
             <div class="additional-photos">
-                <img src="Playing Basketball.jpg" alt="Playing Basketball" class="additional-photo">
-                <img src="presentation.JPG" alt="presentation" class="additional-photo">
-                <img src="IMG_1237.JPG" alt="formula beauty" class="additional-photo">
+                <div>
+                    <img src="Playing Basketball.jpg" alt="Playing Basketball" class="additional-photo">
+                    <p class="photo-caption">Enjoying a game of basketball</p>
+                </div>
+                <div>
+                    <img src="path_to_your_photo2.jpg" alt="Presenting at a conference" class="additional-photo">
+                    <p class="photo-caption">Presenting my research at a conference</p>
+                </div>
+                <div>
+                    <img src="path_to_your_photo3.jpg" alt="Explaining binary star systems" class="additional-photo">
+                    <p class="photo-caption">Explaining binary star systems</p>
+                </div>
             </div>
 
             <h3>Academic Achievements</h3>
@@ -160,6 +174,7 @@
             </ul>
             
             <h3>Professional Bio</h3>
+            <p>I am currently pursuing a Bachelor's degree in Physics at Chongqing University. My academic journey is marked by a deep commitment to understanding the universe through theoretical and computational methods, with a particular focus on high energy astrophysics. I have had the opportunity to participate in various research projects, including simulating black hole accretion flows and studying magnetic field dynamics.</p>
             <p>Education:</p>
             <ul>
                 <li><strong>Chongqing University, China (2021 - 2025)</strong>
@@ -187,5 +202,6 @@
     </footer>
 </body>
 </html>
+
 
 
