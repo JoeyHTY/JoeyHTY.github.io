@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ting Yi He </title>
+    <title>Ting Yi He</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -29,6 +31,16 @@
         header h1 {
             margin: 0;
             font-size: 2em;
+        }
+        .welcome-message {
+            font-size: 2em;
+            margin: 0;
+        }
+        .welcome-sub {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5em;
+            margin: 0;
+            color: #E74C3C;
         }
         .profile-photo {
             display: block;
@@ -87,7 +99,8 @@
 </head>
 <body>
     <header>
-        <h1>I've been waiting for you to come! Welcome to my page!</h1>
+        <h1 class="welcome-message">I've been waiting for you to come!</h1>
+        <h2 class="welcome-sub">Welcome to my page!</h2>
         <p>My academic focus is on high energy astrophysics and my goal for the PhD program is to become an independent researcher in astrophysics. Explore my journey through the sections below:</p>
     </header>
     <div class="container">
@@ -145,3 +158,4 @@
     </footer>
 </body>
 </html>
+
