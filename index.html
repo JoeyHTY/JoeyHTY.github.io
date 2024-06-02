@@ -6,6 +6,7 @@
     <title>TingYi He</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
         body {
             font-family: Arial, sans-serif;
@@ -103,16 +104,10 @@
             margin-bottom: 10px;
         }
         .photo-caption {
-            text-align: center;
-            font-size: 1em;
-            margin-bottom: 20px;
-        }
-        .fancy-caption {
+            text-align: right;
             font-family: 'Playfair Display', serif;
             font-size: 1.2em;
             color: #E74C3C;
-            text-align: right;
-            margin-right: 10px;
         }
         .universe-photo {
             width: 100%;
@@ -144,6 +139,38 @@
             width: 100%;
             z-index: -1;
         }
+        .chongqing-text {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .chongqing-text .fa-hotpot {
+            position: absolute;
+            top: -10px;
+            right: -25px;
+            font-size: 0.8em;
+            color: #E74C3C;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .chongqing-text:hover .fa-hotpot {
+            opacity: 1;
+            transform: rotate(360deg);
+        }
+        .clicked {
+            animation: pulse 0.5s ease;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
@@ -165,20 +192,20 @@
             <h2>About Me</h2>
             
             <h3>Personal Background</h3>
-            <p>Hi! My name is Ting Yi He, and I hail from the vibrant Chongqing, China. My fascination with the cosmos began at a young age, inspired by the STARWARS movie series. Initially drawn to Aerospace Engineering, my passion for exploring the unknown and the excitement I felt when deriving theoretical formulas on my own, which led me to explore various scientific disciplines, ultimately solidifying my passion for astrophysics. Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
+            <p>Hi! My name is Ting Yi He, and I hail from the vibrant <span class="chongqing-text">Chongqing <i class="fas fa-hotpot"></i></span>, China. My fascination with the cosmos began at a young age, inspired by the STARWARS movie series. Initially drawn to Aerospace Engineering, my passion for exploring the unknown and the excitement I felt when deriving theoretical formulas on my own led me to explore various scientific disciplines, ultimately solidifying my passion for astrophysics. Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
             
             <div class="additional-photos">
                 <div>
                     <img src="Playing Basketball.jpg" alt="Playing Basketball" class="additional-photo">
-                    <p class="fancy-caption">don't have many pics in games but do have injuries (Medal of Honor, ACL)</p>
+                    <p class="photo-caption">don't have many pics in games but do have injuries (Medal of Honor, ACL)</p>
                 </div>
                 <div>
                     <img src="presentation.JPG" alt="Presenting at a conference" class="additional-photo">
-                    <p class="fancy-caption">Senior high project: design of Hemispherical light sail</p>
+                    <p class="photo-caption">Senior high project: design of Hemispherical light sail</p>
                 </div>
                 <div>
                     <img src="IMG_1237.JPG" alt="Explaining binary star systems" class="additional-photo">
-                    <p class="fancy-caption">Love first sight for astro</p>
+                    <p class="photo-caption">Love first sight for astro</p>
                 </div>
             </div>
             <p><a href="TingYiHe_CV.pdf" download>Download my CV</a></p>
@@ -188,10 +215,17 @@
     <footer>
         <p>&copy; 2024 Ting Yi He</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chongqingText = document.querySelector('.chongqing-text');
+            chongqingText.addEventListener('click', () => {
+                const icon = chongqingText.querySelector('.fa-hotpot');
+                icon.classList.add('clicked');
+                setTimeout(() => {
+                    icon.classList.remove('clicked');
+                }, 1000); // Duration of the click animation
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
