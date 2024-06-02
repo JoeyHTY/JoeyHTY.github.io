@@ -21,7 +21,7 @@
         header {
             background: #333;
             color: #fff;
-            padding: 30px 0;
+            padding: 20px 0;
             text-align: center;
             border-bottom: #77A6F7 3px solid;
         }
@@ -57,9 +57,14 @@
             color: #333;
             padding: 10px 20px;
             display: inline-block;
-            margin: 0 10px;
+            margin: 10px;
             border: 1px solid #333;
             border-radius: 5px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s ease;
+        }
+        .nav-menu a:hover {
+            background-color: #ddd;
         }
         .additional-photo {
             display: block;
@@ -72,12 +77,10 @@
 <body>
     <header>
         <h1>I've been waiting for you to come! Welcome to my page!</h1>
+        <p>My academic focus is on high energy astrophysics and my goal for the PhD program is to become an independent researcher in astrophysics. Explore my journey through the sections below:</p>
     </header>
     <div class="container">
         <img src="Image_1710483141026.jpg" alt="Ting Yi He" class="profile-photo">
-        <div class="main">
-            <p>Hello! I am Ting Yi He, an aspiring astrophysicist currently pursuing my Bachelor's degree in Physics at Chongqing University. My research interests focus on high energy astrophysics, particularly in areas such as black hole accretion flows, magnetic field dynamics, and the study of fast radio bursts. My goal for the PhD program is to become an independent researcher in astrophysics. Explore my journey through the sections below.</p>
-        </div>
         <div class="nav-menu">
             <a href="#about">About Me</a>
             <a href="#research">Research</a>
@@ -124,4 +127,5 @@
     </footer>
 </body>
 </html>
+
 
