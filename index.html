@@ -94,17 +94,19 @@
         }
         .additional-photos {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
             margin-top: 20px;
         }
         .additional-photo {
+            flex: 0 0 auto;
             width: 30%;
             border-radius: 10px;
-            margin-bottom: 10px;
+            scroll-snap-align: center;
         }
         .photo-caption {
-            text-align: right;
+            text-align: center;
             font-family: 'Playfair Display', serif;
             font-size: 1.2em;
             color: #E74C3C;
