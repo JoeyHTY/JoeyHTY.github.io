@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ting YiHe</title>
+    <title>Ting Yi He - Aspiring Astrophysicist</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400&display=swap');
 
@@ -27,22 +27,26 @@
             padding: 20px 0;
             text-align: center;
             border-bottom: #E74C3C 3px solid;
+            animation: fadeIn 2s ease-in-out;
         }
         .fancy-message {
             font-family: 'Playfair Display', serif;
             font-size: 3em;
             margin: 0;
+            animation: slideIn 2s ease-in-out;
         }
         .welcome-sub {
             font-family: 'Raleway', sans-serif;
             font-size: 2em;
             margin: 0;
             color: #E74C3C;
+            animation: slideIn 2s ease-in-out;
         }
         .intro-text {
             font-family: 'Times New Roman', Times, serif;
             font-size: 1.5em;
             margin-top: 10px;
+            animation: fadeIn 3s ease-in-out;
         }
         .profile-photo {
             display: block;
@@ -56,6 +60,7 @@
             background: #34495E;
             margin-top: 10px;
             border-radius: 10px;
+            animation: fadeIn 3s ease-in-out;
         }
         footer {
             background: #1B2631;
@@ -78,6 +83,7 @@
             border-radius: 5px;
             background-color: #2C3E50;
             transition: background-color 0.3s ease, color 0.3s ease;
+            animation: fadeIn 3s ease-in-out;
         }
         .nav-menu a:hover {
             background-color: #E74C3C;
@@ -97,13 +103,29 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 class="fancy-message">I've been waiting for you to come!</h1>
         <h2 class="welcome-sub">Welcome to my page!</h2>
-        <p class="intro-text">My focus is on high-energy astrophysics mainly, aiming to become an independent researcher through a suitable PhD program. Explore my journey below.</p>
+        <p class="intro-text">My focus is on high-energy astrophysics, aiming to become an independent researcher. Explore my journey below.</p>
     </header>
     <div class="container">
         <img src="Image_1710483141026.jpg" alt="Ting Yi He" class="profile-photo">
@@ -120,7 +142,9 @@
             <p>Hi! My name is Ting Yi He, and I come from the vibrant city of Chongqing, China. My fascination with the cosmos began at a young age, inspired by the STARWARS movie series. Although I initially considered Aerospace Engineering due to my interest, my passion for exploring the unknown and the thrill I experienced when independently deriving theoretical formulas led me to pursue astrophysics. This curiosity and dedication directed me to explore various scientific disciplines, ultimately solidifying my passion for astrophysics. Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
             
             <div class="additional-photos">
+                <img src="Playing Badminton.JPG" alt="Playing Badminton" class="additional-photo">
                 <img src="Playing Basketball.jpg" alt="Playing Basketball" class="additional-photo">
+                <img src="path_to_your_photo3.jpg" alt="Playing Jazz Piano" class="additional-photo">
             </div>
 
             <h3>Academic Achievements</h3>
@@ -160,3 +184,4 @@
     </footer>
 </body>
 </html>
+
