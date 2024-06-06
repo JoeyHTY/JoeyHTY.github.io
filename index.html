@@ -53,11 +53,19 @@
         .slider img {
             width: 300px;
             height: auto;
+            margin: 0 auto;
+        }
+
+        .photo-caption {
+            font-size: 1.5em;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #000;
         }
 
         .icon {
             position: absolute;
-            font-size: 2em;
+            width: 50px;
+            height: 50px;
             display: none;
             animation: fly 2s linear;
         }
@@ -67,7 +75,6 @@
             to { top: 0; left: 100%; }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
     <div class="container">
@@ -76,11 +83,11 @@
         <p>Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
     </div>
     <div class="slider">
-        <div><img src="Playing Basketball.jpg" alt="Playing Basketball"><p>Don't have many pics in games but do have injuries (Medal of Honor, ACL)</p></div>
-        <div><img src="presentation.JPG" alt="Presenting at a conference"><p>Senior high project: design of Hemispherical light sail</p></div>
-        <div><img src="IMG_1237.JPG" alt="Explaining binary star systems"><p>Love first sight for astro</p></div>
+        <div><img src="Playing Basketball.jpg" alt="Playing Basketball"><p class="photo-caption">Don't have many pics in games but do have injuries (Medal of Honor, ACL)</p></div>
+        <div><img src="presentation.JPG" alt="Presenting at a conference"><p class="photo-caption">Senior high project: design of Hemispherical light sail</p></div>
+        <div><img src="IMG_1237.JPG" alt="Explaining binary star systems"><p class="photo-caption">Love first sight for astro</p></div>
     </div>
-    <div id="icon" class="icon"><i class="fas fa-hotpot"></i></div>
+    <div id="icon" class="icon"><img src="hotpot_icon.png" alt="Hotpot Icon"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -107,4 +114,3 @@
     </script>
 </body>
 </html>
-
