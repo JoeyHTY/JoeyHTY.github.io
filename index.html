@@ -2,232 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewp o r t "  c ontent="width=device-width, initial-scale=1.0">
-    <title>TingYi He</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400&display=swap');
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #2C3E50;
-            color: #ECF0F1;
+            background-color: #f0f8ff;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            color: #333;
         }
+
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: rgba(44, 62, 80, 0.8);
-            border-radius: 10px;
-        }
-        header {
-            background: rgba(27, 38, 49, 0.8);
-            color: #ECF0F1;
-            padding: 20px 0;
             text-align: center;
-            border-bottom: #E74C3C 3px solid;
-            animation: fadeIn 2s ease-in-out;
         }
-        .fancy-message {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            margin: 0;
-            animation: slideIn 2s ease-in-out;
+
+        h1 {
+            color: #ff6347;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .welcome-sub {
-            font-family: 'Raleway', sans-serif;
-            font-size: 2em;
-            margin: 0;
-            color: #E74C3C;
-            animation: slideIn 2s ease-in-out;
+
+        h1 span {
+            cursor: pointer;
+            text-decoration: underline;
         }
-        .intro-text {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 1.5em;
-            margin-top: 10px;
-            animation: fadeIn 3s ease-in-out;
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 15px;
         }
-        .profile-photo {
-            display: block;
+
+        .slider {
+            max-width: 800px;
             margin: 20px auto;
-            border-radius: 50%;
-            width: 150px;
+        }
+
+        .slider div {
+            text-align: center;
+        }
+
+        .slider img {
+            width: 300px;
             height: auto;
         }
-        .main {
-            padding: 20px;
-            background: rgba(52, 73, 94, 0.8);
-            margin-top: 10px;
-            border-radius: 10px;
-            animation: fadeIn 3s ease-in-out;
-        }
-        footer {
-            background: rgba(27, 38, 49, 0.8);
-            color: #ECF0F1;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        .nav-menu {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .nav-menu a {
-            text-decoration: none;
-            color: #ECF0F1;
-            padding: 10px 20px;
-            display: inline-block;
-            margin: 10px;
-            border: 1px solid #ECF0F1;
-            border-radius: 5px;
-            background-color: #2C3E50;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            animation: fadeIn 3s ease-in-out;
-        }
-        .nav-menu a:hover {
-            background-color: #E74C3C;
-            color: #2C3E50;
-        }
-        .additional-photos {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .additional-photo {
-            flex: 0 0 auto;
-            width: 30%;
-            border-radius: 10px;
-            scroll-snap-align: center;
-        }
-        .photo-caption {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2em;
-            color: #E74C3C;
-        }
-        .universe-photo {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes slideIn {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-        .background-container {
-            background-image: url('background.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            position: fixed;
-            width: 100%;
-            z-index: -1;
-        }
-        .chongqing-text {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
-        .chongqing-text .fa-hotpot {
+
+        .icon {
             position: absolute;
-            top: -10px;
-            right: -25px;
-            font-size: 0.8em;
-            color: #E74C3C;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            font-size: 2em;
+            display: none;
+            animation: fly 2s linear;
         }
-        .chongqing-text:hover .fa-hotpot {
-            opacity: 1;
-            transform: rotate(360deg);
-        }
-        .clicked {
-            animation: pulse 0.5s ease;
-        }
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.5);
-            }
-            100% {
-                transform: scale(1);
-            }
+
+        @keyframes fly {
+            from { top: 50%; left: 50%; }
+            to { top: 0; left: 100%; }
         }
     </style>
 </head>
 <body>
-    <div class="background-container"></div>
-    <header>
-        <h1 class="fancy-message">I've been waiting for you to come!</h1>
-        <h2 class="welcome-sub">Welcome to my page!</h2>
-        <p class="intro-text">My focus is on high-energy astrophysics mainly, aiming to become an independent researcher through a suitable PhD program. Explore my journey below.</p>
-    </header>
     <div class="container">
-        <img src="Image_1710483141026.jpg" alt="Ting Yi He" class="profile-photo">
-        <div class="nav-menu">
-            <a href="#about">About Me</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="main" id="about">
-            <h2>About Me</h2>
-            
-            <h3>Personal Background</h3>
-            <p>Hi! My name is Ting Yi He, and I hail from the vibrant <span class="chongqing-text">Chongqing <i class="fas fa-hotpot"></i></span>, China. My fascination with the cosmos began at a young age, inspired by the STARWARS movie series. Initially drawn to Aerospace Engineering, my passion for exploring the unknown and the excitement I felt when deriving theoretical formulas on my own led me to explore various scientific disciplines, ultimately solidifying my passion for astrophysics. Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
-            
-            <div class="additional-photos">
-                <div>
-                    <img src="Playing Basketball.jpg" alt="Playing Basketball" class="additional-photo">
-                    <p class="photo-caption">Don't have many pics in games but do have injuries (Medal of Honor, ACL)</p>
-                </div>
-                <div>
-                    <img src="presentation.JPG" alt="Presenting at a conference" class="additional-photo">
-                    <p class="photo-caption">Senior high project: design of Hemispherical light sail</p>
-                </div>
-                <div>
-                    <img src="IMG_1237.JPG" alt="Explaining binary star systems" class="additional-photo">
-                    <p class="photo-caption">Love first sight for astro</p>
-                </div>
-            </div>
-            <p><a href="TingYiHe_CV.pdf" download>Download my CV</a></p>
-
-        </div>
+        <h1>Hi! My name is Ting Yi He, and I hail from the vibrant <span id="chongqing" onclick="flyIcon()">Chongqing</span>, China.</h1>
+        <p>My fascination with the cosmos began at a young age, inspired by the STARWARS movie series. Initially drawn to Aerospace Engineering, my passion for exploring the unknown and the excitement I felt when deriving theoretical formulas on my own led me to explore various scientific disciplines, ultimately solidifying my passion for astrophysics.</p>
+        <p>Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
     </div>
-    <footer>
-        <p>&copy; 2024 Ting Yi He</p>
-    </footer>
+    <div class="slider">
+        <div><img src="Playing Basketball.jpg" alt="Playing Basketball"><p>Don't have many pics in games but do have injuries (Medal of Honor, ACL)</p></div>
+        <div><img src="presentation.JPG" alt="Presenting at a conference"><p>Senior high project: design of Hemispherical light sail</p></div>
+        <div><img src="IMG_1237.JPG" alt="Explaining binary star systems"><p>Love first sight for astro</p></div>
+    </div>
+    <div id="icon" class="icon">&#9733;</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const chongqingText = document.querySelector('.chongqing-text');
-            chongqingText.addEventListener('click', () => {
-                const icon = chongqingText.querySelector('.fa-hotpot');
-                icon.classList.add('clicked');
-                setTimeout(() => {
-                    icon.classList.remove('clicked');
-                }, 1000); // Duration of the click animation
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1
             });
         });
+
+        function flyIcon() {
+            var icon = document.getElementById('icon');
+            icon.style.display = 'block';
+            icon.style.top = '50%';
+            icon.style.left = '50%';
+            setTimeout(function() {
+                icon.style.display = 'none';
+            }, 2000);
+        }
     </script>
 </body>
 </html>
