@@ -45,6 +45,21 @@
             margin-top: 20px;
         }
 
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 10px 0;
+        }
+
+        .nav-menu a {
+            color: #ECF0F1;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
         h1 {
             color: #ff6347;
             font-size: 2.5em;
@@ -99,14 +114,24 @@
 </head>
 <body>
     <div class="sidebar">
-        <img src="Image_1710483141026.jpg" alt="TingYi He">
+        <img src="Image_1710483141026.jpg" alt="Ting Yi He">
         <div class="contact-info">
             <h2>Contact Info</h2>
-            <p>Email: <a href="mailto:astrohty03@gmail.com"astrohty03@gmail.com</a></p>
-            <p>Phone: +86 17347657584</p>
+            <p>Email: <a href="mailto:astrohty03@gmail.com">astrohty03@gmail.com</a></p>
+            <p>Phone: <a href="tel:+8617347657584">+86 17347657584</a></p>
+            <p>Address: Your University, Your City, Your Country</p>
         </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#cv">CV/Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
-    <div class="container">
+    <div class="container" id="home">
         <h1>Hi! My name is Ting Yi He, and I hail from the vibrant <span id="chongqing" onclick="flyIcon()">Chongqing</span>, China.</h1>
         <p>My fascination with the cosmos began at a young age, inspired by the STARWARS movie series. Initially drawn to Aerospace Engineering, my passion for exploring the unknown and the excitement I felt when deriving theoretical formulas on my own led me to explore various scientific disciplines, ultimately solidifying my passion for astrophysics.</p>
         <p>Outside of academics, I enjoy playing badminton and basketball, and I have a deep appreciation for jazz music, especially jazz piano.</p>
@@ -116,11 +141,31 @@
         <div><img src="presentation.JPG" alt="Presenting at a conference"><p class="photo-caption">Senior high project: design of Hemispherical light sail</p></div>
         <div><img src="IMG_1237.JPG" alt="Explaining binary star systems"><p class="photo-caption">Love first sight for astro</p></div>
     </div>
-    <div id="icon" class="icon"><img src="hotpot_icon.jpeg" alt="Hotpot Icon"></div>
+    <div id="icon" class="icon"><img src="hotpot_icon.png" alt="Hotpot Icon"></div>
+
+    <div class="container" id="about">
+        <h2>About Me</h2>
+        <p>Details about your background, education, and personal interests.</p>
+    </div>
 
     <div class="container" id="research">
         <h2>Research</h2>
-        <p>Details about your research, publications, and projects can be added here.</p>
+        <p>Details about your research interests, projects, and ongoing work.</p>
+    </div>
+
+    <div class="container" id="publications">
+        <h2>Publications</h2>
+        <p>A list of your published papers, articles, or books with links.</p>
+    </div>
+
+    <div class="container" id="projects">
+        <h2>Projects</h2>
+        <p>Details about significant projects you've worked on with images and descriptions.</p>
+    </div>
+
+    <div class="container" id="cv">
+        <h2>CV/Resume</h2>
+        <p><a href="TingYiHe_CV.pdf" download>Download my CV</a></p>
     </div>
 
     <div class="container" id="contact">
